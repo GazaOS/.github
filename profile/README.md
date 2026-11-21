@@ -1,51 +1,66 @@
 <p align="center">
-  <img src="https://i.postimg.cc/yYNg3mRy/Picsart-25-06-15-00-05-32-620.jpg" alt="GazaOS Logo" width="300" style="border-radius: 12px;"/>
+  <img src="https://i.postimg.cc/yYNg3mRy/Picsart-25-06-15-00-05-32-620.jpg" alt="GazaOS Logo" width="300" style="border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);"/>
 </p>
 
-<h1 align="center">GazaOS (Android 16.2)</h1>
+<h1 align="center">GazaOS</h1>
 
 <p align="center">
-  <b>A refined, lightweight, and high-performance custom ROM based on Lunaris-AOSP and LineageOS.</b>
+  <b>A refined, high-performance, and custom-tailored Android 16.2 operating system blending stability, modern UI aesthetics, and unmatched audio superiority.</b>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Android-16.2%20(Baklava)-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android 16.2"/>
-  <img src="https://img.shields.io/badge/Base-Lunaris--AOSP-blueviolet?style=flat-square" alt="Lunaris-AOSP"/>
-  <img src="https://img.shields.io/badge/Manifest-16.2-orange?style=flat-square" alt="Manifest 16.2"/>
-  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square" alt="Active"/>
+  <img src="https://img.shields.io/badge/Android-16.2%20(Baklava)-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android 16.2"/>
+  <img src="https://img.shields.io/badge/Base-Lunaris--AOSP-blueviolet?style=for-the-badge" alt="Base Lunaris-AOSP"/>
+  <img src="https://img.shields.io/badge/Vendor-LineageOS-167C80?style=for-the-badge&logo=lineageos&logoColor=white" alt="Vendor LineageOS"/>
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" alt="Status Active"/>
 </p>
 
 ---
 
-## 📖 About GazaOS
+## 🌟 About GazaOS
 
-GazaOS is a community-driven Android custom ROM project focused on delivering a clean, responsive, and bloat-free user experience. Following the streamlined, modular architecture seen in projects like **aosPB-Project**, GazaOS maintains only essential core customizations directly while leveraging upstream **Lunaris-AOSP** and **LineageOS** for rock-solid stability and modern Android 16 platform support.
+**GazaOS** is a community-driven Android ROM built on modern Android 16.2 (Baklava). Combining a stable, rock-solid core with curated cherry-picks and distinct visual enhancements, GazaOS delivers a uniquely customized experience that is fast, smooth, and bloat-free.
 
-### ✨ Highlights
-* **Android 16.2 Base**: Built on the latest Android 16 (Baklava) source tree (`refs/tags/android-16.0.0_r4` + Lineage 23.2).
-* **Minimalist Architecture**: Focused repository structure avoiding unnecessary clutter and maintenance bloat.
-* **Audio Superiority**: Built-in **ViPER4AndroidFX** (`TARGET_INCLUDE_VIPERFX := true`) and Sony/Dolby hardware integration.
-* **Display & Performance**: SurfaceFlinger frame pacing boost, Reality Engine display support, and high-refresh-rate profile support.
-* **Security & Network**: Datura firewall prebuilt support and private signing keys support.
+GazaOS merges features, performance optimizations, and ideas cherry-picked across the Android aftermarket ecosystem:
+
+- **LineageOS**: Rock-solid stability, device compatibility, and hardware vendor base
+- **Lunaris-AOSP**: Modern Android 16 core framework, system enhancements, and upstream stability
+- **crDroid Android**: Cherry-picked rich customization features, lockscreen options, and UI flexibility
+- **AxionAOSP & ProtonAOSP**: Boost framework, fluid animations, and frame pacing optimizations
+- **AOSPA (Paranoid Android)**: Refined maintainer interfaces, hardware diagnostics, and clean aesthetics
+- **Evolution X & Project Clover**: Google Pixel feature integrations, wallpapers, and GMS support
+- **DerpFest & TenXOS**: Fresh UI design inspirations and accent styling
+- **YAAP (Yet Another AOSP Project)**: Low-latency responsive touch and performance tuning
+
+---
+
+## ✨ Features & Highlights
+
+- **Distinct GazaOS Identity**: Custom versioning (`ro.gazaos.build.version`), build types (`Community`, `Official`), and dedicated system properties.
+- **Audio Superiority**: Built-in **ViPER4AndroidFX** suite (`TARGET_INCLUDE_VIPERFX := true`) and Sony / Dolby Atmos hardware integration.
+- **Display & Gaming Boost**: SurfaceFlinger frame pacing boost (`SURFACE_FLINGER_BOOST := true`), Reality Engine support, and configurable high-refresh-rate profiles (up to 120Hz).
+- **Pixel Features**: Optional Pixel Launcher, Monet accent theming, Pixel sound packs, and Google Mobile Services (GMS) integration.
+- **Privacy & Security**: Built-in Datura firewall prebuilts, isolated app lock, and private signing key infrastructure.
+- **Battery & Thermal Management**: Advanced battery graph insights, customized power-saver profiles, and background process controls.
 
 ---
 
 ## 🚀 Getting Started
 
-### Initializing the Manifest
-To initialize your local build tree with the GazaOS 16.2 manifest:
+### Initializing the Repository
+To initialize your local build environment with the GazaOS 16.2 manifest:
 
 ```bash
 mkdir -p GazaOS && cd GazaOS
 repo init -u https://github.com/GazaOS/android.git -b 16.2 --git-lfs
 ```
 
-For bandwidth or disk-constrained setups (shallow sync):
+For bandwidth- or disk-optimized shallow sync:
 ```bash
 repo init -u https://github.com/GazaOS/android.git -b 16.2 --git-lfs --depth=1
 ```
 
-### Syncing the Source Tree
+### Syncing Sources
 ```bash
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 ```
@@ -54,48 +69,67 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 
 ## 🔨 Building GazaOS
 
-Set up the build environment and select your target device:
+Set up the build environment and compile for your target device:
 
 ```bash
+# Set up environment
 source build/envsetup.sh
+
+# Lunch target device
 lunch lineage_<device_codename>-bp4a-user
+
+# Start building
 m bacon
 ```
 
-*(Alternatively, standard shortcuts `breakfast <device_codename>` and `brunch <device_codename>` remain supported).*
-
-### Recommended Build Flags
-Configure your device makefile (`lineage_<device>.mk` or `gazaos_<device>.mk`):
+### Key Build Flags
+Customize your build in your device tree or `lineage_<device>.mk`:
 ```make
-# Include Google Mobile Services (GApps)
+# Include Google Mobile Services (GMS)
 WITH_GMS := true
 
-# Include ViPER4AndroidFX
+# Enable ViPER4AndroidFX
 TARGET_INCLUDE_VIPERFX := true
 
-# SurfaceFlinger Boost
+# Enable SurfaceFlinger frame pacing boost
 SURFACE_FLINGER_BOOST := true
+
+# Enable Reality Engine display enhancements
+USE_REALITY_ENGINE := true
+
+# Maintainer string
+ro.gazaos.maintainer := YourName
 ```
 
 ---
 
-## 📂 Key Organization Repositories
+## 📂 Key GazaOS Repositories
 
-| Repository | Description | Branch |
+| Repository | Purpose | Branch |
 | :--- | :--- | :--- |
-| [**android**](https://github.com/GazaOS/android) | Core source tree repo manifest | `16.2` |
-| [**android_vendor_GazaOS**](https://github.com/GazaOS/android_vendor_GazaOS) | GazaOS vendor configurations, branding & versioning | `16.2` |
-| [**android_packages_apps_ViPER4AndroidFX**](https://github.com/GazaOS/android_packages_apps_ViPER4AndroidFX) | ViPER4AndroidFX audio effects suite | `v4a` |
-| [**.github**](https://github.com/GazaOS/.github) | Organization profile, documentation and workflow configurations | `main` |
+| [**android**](https://github.com/GazaOS/android) | Core source tree manifest | `16.2` |
+| [**android_vendor_GazaOS**](https://github.com/GazaOS/android_vendor_GazaOS) | GazaOS vendor configurations, branding, and versioning | `16.2` |
+| [**packages_apps_Settings**](https://github.com/GazaOS/packages_apps_Settings) | Customized Settings application with GazaOS rebranding | `16.2` |
+| [**android_packages_apps_ViPER4AndroidFX**](https://github.com/GazaOS/android_packages_apps_ViPER4AndroidFX) | ViPER4AndroidFX audio suite | `v4a` |
+| [**.github**](https://github.com/GazaOS/.github) | Public organization documentation and profile | `main` |
 
 ---
 
 ## 🤝 Credits & Acknowledgements
 
-* [**Lunaris-AOSP**](https://github.com/Lunaris-AOSP) - Upstream ROM platform and modern Android 16 additions
-* [**LineageOS**](https://github.com/LineageOS) - The foundation of community Android development
-* [**aosPB-Project**](https://github.com/aosPB-Project) - Minimalist organization and modular ROM structure inspiration
-* [**AOSP**](https://android.googlesource.com) - Android Open Source Project
-* [**CodeLinaro**](https://git.codelinaro.org) - Qualcomm reference implementations and display HALs
-* [**crDroid Android**](https://github.com/crdroidandroid) - Legacy base and customization references
-* [**Evolution X**](https://github.com/Evolution-X) & [**PixelOS-AOSP**](https://github.com/PixelOS-AOSP) - Feature inspirations
+GazaOS is made possible by the incredible work of the open-source Android community:
+- [**Lunaris-AOSP**](https://github.com/Lunaris-AOSP)
+- [**LineageOS**](https://github.com/LineageOS)
+- [**crDroid Android**](https://github.com/crdroidandroid)
+- [**AxionAOSP**](https://github.com/AxionAOSP)
+- [**Paranoid Android (AOSPA)**](https://github.com/AOSPA)
+- [**Evolution X**](https://github.com/Evolution-X)
+- [**DerpFest**](https://github.com/DerpFest-AOSP)
+- [**ProtonAOSP**](https://github.com/ProtonAOSP)
+- [**AOSP**](https://android.googlesource.com)
+
+---
+
+<p align="center">
+  <b>GazaOS Community</b> • Built with dedication for performance and freedom.
+</p>
