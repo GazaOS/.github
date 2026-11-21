@@ -1,10 +1,6 @@
-<p align="center">
-  <img src="https://i.postimg.cc/yYNg3mRy/Picsart-25-06-15-00-05-32-620.jpg" alt="GazaOS" width="220" style="border-radius: 12px;"/>
-</p>
-
 # GazaOS
 
-GazaOS is a custom ROM based on AOSP and Lunaris-AOSP, featuring an extensive range of customizations cherry-picked from various custom ROMs, including:
+GazaOS is a custom ROM based on AOSP, featuring an extensive range of customizations cherry-picked from various custom ROMs, including:
 
 - **Lunaris-AOSP for core Android 16 base and framework changes**
 - **LineageOS for vendor base, HALs, and device compatibility**
@@ -23,7 +19,7 @@ GazaOS brings a balanced mix of performance, audio fidelity, and customization w
 
 - **Android 16.2 (Baklava) base**
 - **Pixel features and Monet theming**
-- **Built-in ViPER4AndroidFX and Dolby audio integration**
+- **Built-in ViPER4AndroidFX and sound enhancements**
 - **Customizable status bar, quick settings, and lockscreen**
 - **SurfaceFlinger boost and refresh rate controls**
 - **Performance optimizations and clean lightweight UX**
