@@ -1,0 +1,39 @@
+name: Validate GazaOS Manifests
+
+on:
+  push:
+    branches: [ "16.2", "main" ]
+  pull_request:
+    branches: [ "16.2", "main" ]
+
+jobs:
+  validate-xml:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout GazaOS Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate XML Manifest Files
+        run: |
+          python3 -c "
+          import xml.etree.ElementTree as ET
+          import glob, sys
+
+          errors = 0
+          for xml_file in glob.glob('**/*.xml', recursive=True):
+              try:
+                  ET.parse(xml_file)
+                  print(f'✅ {xml_file}: Valid XML')
+              except Exception as e:
+                  print(f'❌ {xml_file}: Invalid XML - {e}', file=sys.stderr)
+                  errors += 1
+
+          if errors > 0:
+              sys.exit(1)
+          print('All manifest XML files passed validation.')
+          "

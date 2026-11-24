@@ -1,0 +1,43 @@
+name: Device Maintainer Application
+description: Apply to maintain an official device for GazaOS
+labels: ["device-request", "maintainer"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Apply to become an official device maintainer for GazaOS.
+  - type: input
+    id: device_name
+    attributes:
+      label: Device Name & Codename
+      placeholder: Xiaomi Redmi Note 12 5G / POCO X5 5G (stone)
+    validations:
+      required: true
+  - type: input
+    id: device_tree
+    attributes:
+      label: Device Tree Repository URL
+      placeholder: https://github.com/.../device_xiaomi_stone
+    validations:
+      required: true
+  - type: input
+    id: kernel_tree
+    attributes:
+      label: Kernel Source Repository URL
+      placeholder: https://github.com/.../kernel_xiaomi_stone
+    validations:
+      required: true
+  - type: input
+    id: vendor_tree
+    attributes:
+      label: Vendor Tree Repository URL
+      placeholder: https://github.com/.../vendor_xiaomi_stone
+    validations:
+      required: true
+  - type: textarea
+    id: test_status
+    attributes:
+      label: Hardware Working Status
+      description: Confirm working status of RIL, Wi-Fi, Bluetooth, Camera, Audio, Biometrics, and SELinux (Enforcing).
+    validations:
+      required: true
