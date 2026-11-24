@@ -25,6 +25,15 @@ GazaOS brings a balanced mix of performance, audio fidelity, and customization w
 - **Performance optimizations and clean lightweight UX**
 - **Many features from various ROMs merged together**
 
+## 🇵🇸 Stand With Palestine
+
+GazaOS is dedicated to freedom, human dignity, and solidarity with the people of Palestine. 
+
+If you would like to support humanitarian relief efforts on the ground, consider donating to verified international organizations:
+- **[Palestinian Red Crescent Society (PRCS)](https://www.palestinercs.org/)**: Emergency medical and ambulance services in Gaza and the West Bank.
+- **[Medical Aid for Palestinians (MAP)](https://www.map.org.uk/)**: Critical health and medical support for Palestinians.
+- **[UNRWA](https://www.unrwa.org/)**: United Nations Relief and Works Agency providing emergency aid, food, and shelter.
+
 ## Build
 
 Initialize local repository:
