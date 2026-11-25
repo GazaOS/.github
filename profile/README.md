@@ -1,10 +1,10 @@
 # GazaOS
 
-GazaOS is a custom ROM based on AOSP, featuring an extensive range of customizations cherry-picked from various custom ROMs, including:
+GazaOS is a hybrid custom ROM built on AOSP, combining core repositories from **Lunaris-AOSP**, **crDroid**, and **LineageOS** with **GazaOS** system logic, Gaza Lab customization, and a Free Palestine humanitarian solidarity motive:
 
-- **Lunaris-AOSP for core Android 16 base and framework changes**
-- **LineageOS for vendor base, HALs, and device compatibility**
-- **crDroid for various UI changes and customization features**
+- **Lunaris-AOSP & LineageOS for core Android 16.2 base, framework, HALs, and device compatibility**
+- **crDroid for UI changes, OTA JSON schema, versioning flow, and customization features**
+- **GazaOS core repositories (`android`, `vendor_lineage`, `frameworks_base`, `packages_apps_Settings`, `packages_apps_Singularity`, `bootable_recovery`) for Gaza Lab, unified properties, and Free Palestine solidarity**
 - **AxionAOSP and ProtonAOSP for frame pacing and smoothness**
 - **EvolutionX and Project Clover for Pixel features and GMS**
 - **ViPER4AndroidFX for system audio processing**
@@ -52,6 +52,11 @@ Build:
 lunch lineage_<device_codename>-bp4a-user
 m bacon
 ```
+
+## Team & Maintainers
+
+- **Lead Developer**: **Farhan Muh Tasim** ([@Gtajisan](https://github.com/Gtajisan) / [@frnAlt](https://github.com/frnAlt))
+- **Device Maintainer (`stone`)**: **Masud Parvez** ([@Parvez52](https://github.com/Parvez52))
 
 ## Credits
 
