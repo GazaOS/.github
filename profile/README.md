@@ -20,8 +20,9 @@ GazaOS brings a balanced mix of modern UI craft, performance, audio fidelity, an
 
 - **Android 16.2 (Baklava) base**
 - **Adaptive Settings Homepage Engine**: Compose-based bento layout with live **GazaOS Hybrid**, **HyperOS**, **ColorOS**, and **AOSP** presets, squircle icon shapes, contained chevrons, and drag-and-drop tile customization
-- **Modular Quick Settings (Mist QS)**: Modular header, ColorOS-style tile backgrounds, cached dynamic blur, and waveform media controls
-- **Gaza Lab (`Singularity`)**: Status bar logos (including full-color Palestine flag vector), lockscreen clocks, input-monitor 3-finger swipe gestures, and Monet theming
+- **Modular Quick Settings (Mist QS)**: HyperOS-style rounded-square tiles & sliders, MIUI corner-spread spring animations, ColorOS tile backgrounds, cached dynamic blur, and waveform media controls while preserving AOSP's notification/QS flow
+- **HyperOS 4 Media & Lite Architecture**: Lightweight curated HyperOS 4 wallpapers (`GazaOSWallpapers`), HyperOS 4 UI lock/unlock sounds & ringtones, `MiSansLatinVF` font, and opt-in extra packages to keep the ROM fast and lean
+- **Gaza Lab (`Singularity`)**: Status bar logos (including full-color Palestine flag vector), HyperOS/lockscreen clocks, input-monitor 3-finger swipe gestures, and Monet theming
 - **Dynamic About Phone & GazaOS Dev Info**: Live hardware summary card and dedicated developer/solidarity info menu
 - **Built-in ViPER4AndroidFX, Sony Dolby Atmos & Datura Firewall**
 - **Optimized `speed-profile` dexopt, content-detection refresh rate controls, and clean lightweight UX**
