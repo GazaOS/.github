@@ -21,6 +21,9 @@ GazaOS is a hybrid custom ROM built on AOSP 16.2, combining core upstream bases 
 - [`vendor_lineage`](https://github.com/GazaOS/vendor_lineage) (`16.2`): GazaOS branding/props (`ro.gazaos.ui=HyperOS-Hybrid`), HyperOS squircle icon mask & rounded signal/Wi-Fi bar overlays, lightweight HyperOS 4 media (`GazaOSWallpapers`, audio, `MiSansLatinVF`), opt-in extra flags
 - [`bootable_recovery`](https://github.com/GazaOS/bootable_recovery) (`16.2`): GazaOS Recovery & Fastbootd branded artwork and version headers
 - [`android_packages_apps_ViPER4AndroidFX`](https://github.com/GazaOS/android_packages_apps_ViPER4AndroidFX) (`16.2`): Built-in ViPER4AndroidFX audio processing
+- [`hardware_dolby`](https://github.com/GazaOS/hardware_dolby) (`sony-1.0`): Built-in Sony Dolby Atmos HAL & audio integration
+- [`prebuilts_calyx_datura`](https://github.com/GazaOS/prebuilts_calyx_datura) (`15-qpr2`): Prebuilt Calyx Datura per-app firewall
+- [`vendor_lineage-priv_keys`](https://github.com/GazaOS/vendor_lineage-priv_keys) (`16.2`): Signing keys template & certificate overrides for GazaOS builds
 
 > **Device Trees**: GazaOS focuses on clean ROM source repositories. Pair with your own device, vendor, and kernel trees (for example, Mayu trees) via `.repo/local_manifests/`.
 
