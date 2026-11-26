@@ -1,71 +1,55 @@
+<div align="center">
+
 # GazaOS
 
-GazaOS is a hybrid custom ROM built on AOSP, combining core repositories from **Lunaris-AOSP**, **crDroid**, and **LineageOS** with **GazaOS** system logic, **HyperOS / ColorOS / GazaOS Hybrid** UI craft, **Gaza Lab** customization, and a Free Palestine humanitarian solidarity motive:
+**HyperOS-Hybrid Lite AOSP 16.2 · Free Palestine Solidarity**
 
-- **Website & Download Portal**: [gazaos.github.io](https://gazaos.github.io/)
-- **Lunaris-AOSP & LineageOS** for core Android 16.2 base, framework, HALs, and device compatibility
-- **crDroid** for UI changes, OTA JSON schema, versioning flow, and customization features
-- **GazaOS core repositories (`android`, `vendor_lineage`, `frameworks_base`, `packages_apps_Settings`, `packages_apps_Singularity`, `bootable_recovery`)** for HyperOS/ColorOS/Hybrid Settings UI, Gaza Lab, unified properties, and Free Palestine solidarity
-- **AxionAOSP and ProtonAOSP** for frame pacing and smoothness
-- **EvolutionX and Project Clover** for Pixel features and GMS
-- **ViPER4AndroidFX & Sony Dolby Atmos** for system audio processing
-- **Calyx Datura** for per-app network firewall control
-- **AOSPA (Paranoid Android)** for hardware diagnostics and maintainer info
-- **YAAP (Yet Another AOSP Project)** for touch response and performance tuning
-- **DerpFest and TenXOS** for UI ideas and styling
+[![Website](https://img.shields.io/badge/Website-gazaos.github.io-0B6B4D?style=for-the-badge)](https://gazaos.github.io/)
+[![Manifest](https://img.shields.io/badge/Manifest-16.2-10B981?style=for-the-badge)](https://github.com/GazaOS/android)
+[![Telegram](https://img.shields.io/badge/Community-t.me%2FGazaOS-0088cc?style=for-the-badge)](https://t.me/GazaOS)
 
-## Features
+</div>
 
-GazaOS brings a balanced mix of modern UI craft, performance, audio fidelity, and customization while keeping stability and lean image size in mind:
+GazaOS is a hybrid custom ROM built on AOSP 16.2, combining core upstream bases from **Lunaris-AOSP**, **crDroid**, and **LineageOS** with **GazaOS** system styling, **HyperOS-Hybrid** visuals, **Gaza Lab** customization, and a Free Palestine humanitarian solidarity mission.
 
-- **Android 16.2 (Baklava) base**
-- **Adaptive Settings Homepage Engine**: Compose-based bento layout with live **GazaOS Hybrid**, **HyperOS**, **ColorOS**, and **AOSP** presets, squircle icon shapes, contained chevrons, and drag-and-drop tile customization
-- **Modular Quick Settings (Mist QS)**: HyperOS-style rounded-square tiles & sliders, MIUI corner-spread spring animations, ColorOS tile backgrounds, cached dynamic blur, and waveform media controls while preserving AOSP's notification/QS flow
-- **HyperOS 4 Media & Lite Architecture**: Lightweight curated HyperOS 4 wallpapers (`GazaOSWallpapers`), HyperOS 4 UI lock/unlock sounds & ringtones, `MiSansLatinVF` font, and opt-in extra packages to keep the ROM fast and lean
-- **Gaza Lab (`Singularity`)**: Status bar logos (including full-color Palestine flag vector), HyperOS/lockscreen clocks, input-monitor 3-finger swipe gestures, and Monet theming
-- **Dynamic About Phone & GazaOS Dev Info**: Live hardware summary card and dedicated developer/solidarity info menu
-- **Built-in ViPER4AndroidFX, Sony Dolby Atmos & Datura Firewall**
-- **Optimized `speed-profile` dexopt, content-detection refresh rate controls, and clean lightweight UX**
+## Core ROM Repositories
 
-## 🇵🇸 Stand With Palestine
+- [`android`](https://github.com/GazaOS/android) (`16.2`): Main ROM manifest (`snippets/gazaos.xml`) and lite build guide
+- [`frameworks_base`](https://github.com/GazaOS/frameworks_base) (`16.2`): SystemUI Modular QS (rounded-square tiles, MIUI corner-spread springs), framed screenshot overlay & rounded icons, lock screen & GazaOS crest integration
+- [`packages_apps_Settings`](https://github.com/GazaOS/packages_apps_Settings) (`16.2`): Compose bento Homepage (`Hybrid` / `HyperOS` / `ColorOS` / `AOSP` presets), device-badged About tile, Bento About Phone card, and GazaOS Dev Info
+- [`packages_apps_Singularity`](https://github.com/GazaOS/packages_apps_Singularity) (`16.2`): **Gaza Lab** customization hub (QS Mist defaults, status bar icon bar & GazaOS crest logo, lock screen clock/styles, Monet, gestures)
+- [`vendor_lineage`](https://github.com/GazaOS/vendor_lineage) (`16.2`): GazaOS branding/props (`ro.gazaos.ui=HyperOS-Hybrid`), HyperOS squircle icon mask & rounded signal/Wi-Fi bar overlays, lightweight HyperOS 4 media (`GazaOSWallpapers`, audio, `MiSansLatinVF`), opt-in extra flags
+- [`bootable_recovery`](https://github.com/GazaOS/bootable_recovery) (`16.2`): GazaOS Recovery & Fastbootd branded artwork and version headers
+- [`android_packages_apps_ViPER4AndroidFX`](https://github.com/GazaOS/android_packages_apps_ViPER4AndroidFX) (`16.2`): Built-in ViPER4AndroidFX audio processing
 
-GazaOS is dedicated to freedom, human dignity, and solidarity with the people of Palestine.
+> **Device Trees**: GazaOS focuses on clean ROM source repositories. Pair with your own device, vendor, and kernel trees (for example, Mayu trees) via `.repo/local_manifests/`.
 
-If you would like to support humanitarian relief efforts on the ground, consider donating to verified international organizations:
-- **[Palestinian Red Crescent Society (PRCS)](https://www.palestinercs.org/)**: Emergency medical and ambulance services in Gaza and the West Bank.
-- **[Medical Aid for Palestinians (MAP)](https://www.map.org.uk/)**: Critical health and medical support for Palestinians.
-- **[UNRWA](https://www.unrwa.org/)**: United Nations Relief and Works Agency providing emergency aid, food, and shelter.
+## Highlights
 
-## Build
+- **HyperOS-Hybrid on AOSP Logic**: Preserves native Android 16.2 shade/notification flow while delivering HyperOS-inspired rounded-square QS tiles, MIUI spring animations, squircle adaptive icon masks, framed screenshot shelf cards, and pill signal/Wi-Fi icon bars.
+- **Lite & Fast by Default**: Heavy optional packages (`GameSpace`, `LMOFreeform`, `BatteryStatsViewer`, `AxThemeStore`, `OmniStyle`, `MatLog`) are opt-in (`?= false`), `TARGET_LOW_END_BLUR=true`, and builds default to `speed-profile` dexopt.
+- **HyperOS 4 Media**: Lightweight curated `GazaOSWallpapers` (~5 MB), HyperOS 4 lock/unlock/notification/ringtone audio, and `MiSansLatinVF`.
+- **GazaOS Identity**: Custom GazaOS geometric crest across Status Bar, About Phone, Settings, Bootanimation, and Recovery/Fastbootd.
 
-Initialize local repository:
+## Stand With Palestine
+
+GazaOS stands in solidarity with the people of Palestine. Verified humanitarian relief organizations:
+- **[Palestinian Red Crescent Society (PRCS)](https://www.palestinercs.org/)**
+- **[Medical Aid for Palestinians (MAP)](https://www.map.org.uk/)**
+- **[UNRWA](https://www.unrwa.org/)**
+
+## Sync & Build
+
 ```bash
 repo init -u https://github.com/GazaOS/android -b 16.2 --git-lfs
-```
-
-Sync:
-```bash
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
-```
-
-Build:
-```bash
+# Add your device/vendor/kernel trees (e.g. Mayu trees) into .repo/local_manifests/
 . build/envsetup.sh
 lunch lineage_<device_codename>-bp4a-user
 m bacon
 ```
 
-## Team & Maintainers
+## Team
 
 - **Lead Developer**: **Farhan Muh Tasim** ([@Gtajisan](https://github.com/Gtajisan) / [@frnAlt](https://github.com/frnAlt))
-- **Device Maintainer (`stone`)**: **Masud Parvez** ([@Parvez52](https://github.com/Parvez52))
-
-## Credits
-
-A huge thanks to the developers of all the ROMs from which GazaOS cherry-picks features, as well as the Android open-source community for making all this possible.
-
----
-
-## Community
-- **Website**: https://gazaos.github.io/
-- **Telegram**: https://t.me/GazaOS
+- **Website**: [gazaos.github.io](https://gazaos.github.io/) · **Telegram**: [t.me/GazaOS](https://t.me/GazaOS)
