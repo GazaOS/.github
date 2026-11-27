@@ -1,36 +1,54 @@
-# GazaOS
+<p align="center">
+  <a href="https://gazaos.github.io/">
+    <img src="https://gazaos.github.io/profile/gazaos-org-logo.svg" alt="GazaOS Organization Logo" height="72" />
+  </a>
+</p>
 
-GazaOS is a custom ROM based on AOSP and Lunaris-AOSP, featuring a lightweight HyperOS-Hybrid look alongside customizations cherry-picked from various custom ROMs, including:
-
-- **Lunaris-AOSP for core AOSP base and customizations**
-- **LineageOS for vendor base**
-- **crDroid for UI changes and source features**
-- **DerpFest and AxionAOSP for Modular QS and optimizations**
-- **Project Clover for GMS and theming**
-- **EvolutionX for PixelProps**
-- **YAAP (Yet Another AOSP Project)**
-- **ViPER4AndroidFX & Sony Dolby Atmos for audio**
-- **Calyx Datura for firewall**
-- **HyperOS 4 for lightweight UI polish, clock typography, and media**
-- **And many more**
-
-## Features
-
-GazaOS brings a balanced mix of HyperOS-Hybrid polish, performance, smoothness, and customization while keeping AOSP logic intact and builds lite for all devices:
-
-- **Pixel features & Monet theming**
-- **HyperOS-Hybrid QS, squircle masks, Lock Styles, and Launcher**
-- **Lite & buildable for all devices by default**
-- **Customizable lockscreen, status bar, and Gaza Lab**
-- **Performance optimizations and frame pacing**
-- **Free Palestine humanitarian solidarity identity**
-- **Many features from various ROMs merged together**
-
-## Credits
-
-A huge thanks to Lunaris-AOSP and the developers of all the ROMs from which GazaOS cherry-picks features, as well as the Android open-source community for making all this possible.
+<p align="center">
+  <a href="https://gazaos.github.io/">Website</a> &bull;
+  <a href="https://github.com/GazaOS/android">Manifest (16.2)</a> &bull;
+  <a href="https://github.com/GazaOS/OTA">Official OTA</a> &bull;
+  <a href="https://github.com/GazaOS/changelogs">Changelogs</a> &bull;
+  <a href="https://github.com/GazaOS/official">Maintainership</a> &bull;
+  <a href="https://github.com/GazaOS/issue_tracker">Issue Tracker</a> &bull;
+  <a href="https://t.me/GazaOS">Telegram</a>
+</p>
 
 ---
 
-## Group
-https://t.me/GazaOS
+# GazaOS — HyperOS-Hybrid Lite Android 16.2
+
+**GazaOS** is an open-source Android 16.2 (`BP4A`) custom ROM combining upstream stability from **Lunaris-AOSP**, **crDroid**, and **LineageOS** with a modular **HyperOS Control Center QS**, a one-tap **AOSP Look Lite** toggle in **Gaza Lab**, lightweight HyperOS 4 media/fonts, and a **Free Palestine** humanitarian solidarity mission.
+
+## Core Repositories & Organization Management
+
+| Repository | Purpose | Link |
+| :--- | :--- | :--- |
+| **Platform Manifest** | Sync all GazaOS 16.2 source trees (`repo init -b 16.2`) | [GazaOS/android](https://github.com/GazaOS/android) |
+| **Official OTA** | Device OTA manifests (`builds/`, `builds/vanilla/`) & device changelogs | [GazaOS/OTA](https://github.com/GazaOS/OTA) |
+| **Source Changelogs** | Platform-wide dated feature & security patch changelogs | [GazaOS/changelogs](https://github.com/GazaOS/changelogs) |
+| **Official Maintainership** | Standards, code of conduct, device roster & application form | [GazaOS/official](https://github.com/GazaOS/official) |
+| **Issue Tracker** | User bug reports, crash logs & feature triage | [GazaOS/issue_tracker](https://github.com/GazaOS/issue_tracker) |
+| **Official Website** | Device downloads, interactive UI studio & team | [gazaos.github.io](https://gazaos.github.io/) |
+
+## Highlights
+
+- **HyperOS Control Center & AOSP Look Lite:** Full HyperOS Control Center QS defaults (split shade, horizontal swipe, rounded-square sliders & tiles, blurred vertical GazaOS volume panel) with a one-tap **AOSP Look Lite** switch inside **Gaza Lab** (`packages_apps_Singularity`).
+- **Lightweight UI & Media:** Curated HyperOS 4 wallpapers, ringtones/UI audio, MiSans Latin font, and adaptive squircle masks while heavy add-ons remain opt-in (`TARGET_INCLUDE_* ?= false`).
+- **Compose Settings & Launcher3:** Live homepage layout presets (`GazaOS Hybrid`, `HyperOS`, `ColorOS`, `AOSP`), dynamic About Phone hardware cards, Lock Styles Studio, and custom Updater/SetupWizard.
+- **Privacy & Audio DSP:** Built-in Calyx Datura firewall, Sony Dolby Atmos, and ViPER4Android FX.
+
+## Quick Sync
+
+```bash
+repo init -u https://github.com/GazaOS/android -b 16.2 --git-lfs
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+```
+
+## Credits
+
+Huge gratitude to **Lunaris-AOSP**, **LineageOS**, **crDroid**, **AxionAOSP**, **DerpFest**, **EvolutionX**, **YAAP**, **CalyxOS (Datura)**, and all open-source device maintainers.
+
+---
+
+<p align="center">❤️ Free Palestine 🇵🇸 &bull; Released under the Apache 2.0 License</p>
